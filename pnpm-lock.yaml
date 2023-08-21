@@ -6,11 +6,11 @@ settings:
 
 dependencies:
   '@astrojs/vercel':
-    specifier: 3.8.1
-    version: 3.8.1(astro@2.10.7)(react@18.2.0)
+    specifier: 3.8.2
+    version: 3.8.2(astro@2.10.12)(react@18.2.0)
   astro:
-    specifier: 2.10.7
-    version: 2.10.7
+    specifier: 2.10.12
+    version: 2.10.12
 
 packages:
 
@@ -49,13 +49,13 @@ packages:
       vscode-uri: 3.0.7
     dev: false
 
-  /@astrojs/markdown-remark@2.2.1(astro@2.10.7):
+  /@astrojs/markdown-remark@2.2.1(astro@2.10.12):
     resolution: {integrity: sha512-VF0HRv4GpC1XEMLnsKf6jth7JSmlt9qpqP0josQgA2eSpCIAC/Et+y94mgdBIZVBYH/yFnMoIxgKVe93xfO2GA==}
     peerDependencies:
       astro: ^2.5.0
     dependencies:
       '@astrojs/prism': 2.1.2
-      astro: 2.10.7
+      astro: 2.10.12
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.2
       rehype-raw: 6.1.1
@@ -95,16 +95,16 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/vercel@3.8.1(astro@2.10.7)(react@18.2.0):
-    resolution: {integrity: sha512-bombTuWpoKYN+ECncOBXqBKF4/5DXoUb4N80r2ppwRG41+MP/b7nLqTZp/XxkNXkAJxOtcDqOEWb0M+R0Di2Zg==}
+  /@astrojs/vercel@3.8.2(astro@2.10.12)(react@18.2.0):
+    resolution: {integrity: sha512-VtVR+HXoQqdSrt+LdBi3qrwQClcIItb/9AfVYoTuAaC3iu0lDT3WPpRr4kbS/Wxcvfq8AWQw5VFODK34PKs53g==}
     peerDependencies:
-      astro: ^2.10.6
+      astro: ^2.10.10
     dependencies:
       '@astrojs/internal-helpers': 0.1.2
       '@astrojs/webapi': 2.2.0
       '@vercel/analytics': 0.1.11(react@18.2.0)
       '@vercel/nft': 0.22.6
-      astro: 2.10.7
+      astro: 2.10.12
       esbuild: 0.17.19
       fast-glob: 3.3.0
       set-cookie-parser: 2.6.0
@@ -1073,8 +1073,8 @@ packages:
     resolution: {integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==}
     dev: false
 
-  /astro@2.10.7:
-    resolution: {integrity: sha512-R8aF4yphrsbhxW2UxHZ1DslBn8e8vPQ23+Z/OnajNE1Q4HEZCOZ4CAbHJx2PDwq2p+CRWArNalpr3+rTqyOYBQ==}
+  /astro@2.10.12:
+    resolution: {integrity: sha512-JbD+hLCbXhpDofuzWQxojmjXwoqD0bR2BGqIByZ7B5Cj6dKQXHIr1HsrDdWcmjM+O4NXKV2TCfeXv1ZTtjqX3Q==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
     hasBin: true
     peerDependencies:
@@ -1086,7 +1086,7 @@ packages:
       '@astrojs/compiler': 1.8.1
       '@astrojs/internal-helpers': 0.1.2
       '@astrojs/language-server': 1.0.8
-      '@astrojs/markdown-remark': 2.2.1(astro@2.10.7)
+      '@astrojs/markdown-remark': 2.2.1(astro@2.10.12)
       '@astrojs/telemetry': 2.1.1
       '@astrojs/webapi': 2.2.0
       '@babel/core': 7.22.5
@@ -1105,7 +1105,6 @@ packages:
       common-ancestor-path: 1.0.1
       cookie: 0.5.0
       debug: 4.3.4
-      deepmerge-ts: 4.3.0
       devalue: 4.3.2
       diff: 5.1.0
       es-module-lexer: 1.3.0
@@ -1116,6 +1115,7 @@ packages:
       github-slugger: 2.0.0
       gray-matter: 4.0.3
       html-escaper: 3.0.3
+      http-cache-semantics: 4.1.1
       js-yaml: 4.1.0
       kleur: 4.1.5
       magic-string: 0.30.2
@@ -1429,11 +1429,6 @@ packages:
     resolution: {integrity: sha512-O8x12RzrUF8xyVcY0KJowWsmaJxQbmy0/EtnNtHRpsOcT7dFk5W598coHqBVpmWo1oQQfsCqfCmkZN5DJrZVdg==}
     dependencies:
       character-entities: 2.0.2
-    dev: false
-
-  /deepmerge-ts@4.3.0:
-    resolution: {integrity: sha512-if3ZYdkD2dClhnXR5reKtG98cwyaRT1NeugQoAPTTfsOpV9kqyeiBF9Qa5RHjemb3KzD5ulqygv6ED3t5j9eJw==}
-    engines: {node: '>=12.4.0'}
     dev: false
 
   /default-browser-id@3.0.0:
@@ -1920,6 +1915,10 @@ packages:
 
   /html-void-elements@2.0.1:
     resolution: {integrity: sha512-0quDb7s97CfemeJAnW9wC0hw78MtW7NU3hqtCD75g2vFlDLt36llsYD7uB7SUzojLMP24N5IatXf7ylGXiGG9A==}
+    dev: false
+
+  /http-cache-semantics@4.1.1:
+    resolution: {integrity: sha512-er295DKPVsV82j5kw1Gjt+ADA/XYHsajl82cGNQG2eyoPkvgUhX+nDIyelzhIWbbsXP39EHcI6l5tYs2FYqYXQ==}
     dev: false
 
   /https-proxy-agent@5.0.1:
