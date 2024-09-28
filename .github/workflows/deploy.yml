@@ -31,7 +31,9 @@ jobs:
         uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9 # v4
         with:
           path: '.next/cache'
-          key: astro-cache-${{ hashFiles('package-lock.json') }}
+          key: astro-cache-${{ hashFiles('package-lock.json') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
+          restore-keys: |
+            astro-cache-${{ hashFiles('package-lock.json') }}-
 
       - name: Build your site
         run: bun run pages:build
