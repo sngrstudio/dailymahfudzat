@@ -26,9 +26,15 @@ jobs:
 
       - name: Install dependencies
         run: bun install --frozen-lockfile
+        
+      - name: Restore Build Cache
+        uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9 # v4
+        with:
+          path: '.next/cache'
+          key: astro-cache-${{ hashFiles('package-lock.json') }}
 
       - name: Build your site
-        run: bun run build
+        run: bun run pages:build
 
       - name: Upload Pages Artifact
         uses: actions/upload-artifact@50769540e7f4bd5e21e526ee35c689e35e0d6874 # v4
